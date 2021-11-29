@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<feeds xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="feeds.xsd">
+    <feed>
+        <titulo>El pais (usado para pruebas)</titulo>
+        <url>https://ep00.epimg.net/rss/tags/ultimas_noticias.xml</url>
+    </feed>
+</feeds>
