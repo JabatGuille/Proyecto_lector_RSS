@@ -1,4 +1,6 @@
-package CrearXMLDOM;
+package Proyecto.CrearXMLDOM;
+
+import Proyecto.Feed;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -22,7 +24,7 @@ public class GeneradorDOM {
 
     private List<String> datos;
 
-    public void generador(String titulo, String url){
+    public void generador(Feed feed){
 
         datos = new ArrayList<>();
 //Carga datos (si quieres añadir datos)
@@ -30,13 +32,13 @@ public class GeneradorDOM {
 // Crea el documento
         crearDocumento();
 //Inicia el sistema para poder rellenarlo
-        run(titulo,url);
+        run(feed);
     }
 
-    public void run(String titulo, String url) {
+    public void run(Feed feed) {
         System.out.println("Iniciando..");
-        datos.add(titulo);
-        datos.add(url);
+        datos.add(feed.getTitulo());
+        datos.add(feed.getUrl());
         crearArbolDOM();
         exportarFichero();
         System.out.println("Fichero generado.");

@@ -1,14 +1,19 @@
-import CrearXMLDOM.GeneradorDOM;
+package Proyecto;
 
+import Proyecto.CrearXMLDOM.*;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
 
     public static void main(String[] args) {
         boolean bucle = true;
         BufferedReader br = new BufferedReader(
                 new InputStreamReader(System.in));
+        List<Feed> feeds = new ArrayList<>();
         do {
             System.out.println("RSS\n" +
                     "---\n" +
@@ -24,8 +29,9 @@ public class Main {
                         String titulo = br.readLine();
                         System.out.println("Introduce el url para guardarlo en el nuevo feed");
                         String url = br.readLine();
+                        Feed feed = new Feed(titulo,url);
                         GeneradorDOM generador = new GeneradorDOM();
-                        generador.generador(titulo,url);
+                        generador.generador(feed);
 
                         //SAXparse.lectura(RSS);
                         break;

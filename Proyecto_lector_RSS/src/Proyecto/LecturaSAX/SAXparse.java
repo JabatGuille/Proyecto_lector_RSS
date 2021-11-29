@@ -1,4 +1,4 @@
-package LecturaSAX;
+package Proyecto.LecturaSAX;
 
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;

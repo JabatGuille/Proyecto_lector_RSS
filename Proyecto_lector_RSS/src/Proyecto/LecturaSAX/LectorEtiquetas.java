@@ -1,4 +1,4 @@
-package LecturaSAX;
+package Proyecto.LecturaSAX;
 
 public class LectorEtiquetas {
     // Guarda todas las etiquetas que se estan leyendo
